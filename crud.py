@@ -1,14 +1,14 @@
 from sqlalchemy.orm import Session
 
-import models, schemas
+from . import models, schemas
 
 
 def get_user(db: Session, user_id: int):
-    return db.query(models.User).filter(models.User.id == user_id).one()
+    return db.query(models.User).filter(models.User.id == user_id).first()
 
 
 def get_user_by_email(db: Session, email: str):
-    return db.query(models.User).filter(models.User.email == email).one()
+    return db.query(models.User).filter(models.User.email == email).first()
 
 
 def get_users(db: Session, offset: int = 0, limit: int = 100):

@@ -1,10 +1,10 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float
 from sqlalchemy.orm import relationship
 
-from database import Base
+from . import database
 
 
-class User(Base):
+class User(database.Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
@@ -15,7 +15,7 @@ class User(Base):
     items = relationship("Pet", back_populates="owner")
 
 
-class Pet(Base):
+class Pet(database.Base):
     __tablename__ = "pets"
 
     id = Column(Integer, primary_key=True)
