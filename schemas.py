@@ -7,7 +7,7 @@ class SpiderBase(BaseModel):
     molt: int | None = None
     size: float | None = None
     sex: str | None = None
-    info: str | None = None
+    extra_info: str | None = None
 
 
 class Spider(SpiderBase):
