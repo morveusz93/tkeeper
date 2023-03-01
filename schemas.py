@@ -17,6 +17,7 @@ class Spider(SpiderBase):
     class Config:
         orm_mode = True
 
+
 class SpiderCreate(SpiderBase):
     pass
 
@@ -36,4 +37,3 @@ class User(UserBase):
 
     class Config:
         orm_mode = True
-        
