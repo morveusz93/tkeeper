@@ -29,3 +29,6 @@ test:  ## just tests
 test-with-linters:  ## tests with black and isort
 	poetry run pytest --black --isort
 
+
+run-local:  ## run API
+	poetry run uvicorn main:app --reload
